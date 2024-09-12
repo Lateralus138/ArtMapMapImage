@@ -26,4 +26,8 @@ jobs:
       run: |
         Set-Location scripts
         & '.\build.ps1'
-        Get-ChildItem ..\source
+        if ($LASTEXITCODE -gt 0)
+        {
+          Exit $LASTEXITCODE
+        }
+        Get-ChildItem ..\build
