@@ -38,7 +38,7 @@ def main():
     arguments.y_begin -= 1
     try:
         image = Image.open(input_file)
-    except:
+    except Exception:
         print('Could not open ' + image.__str__() + " for writing for an unknown reason.")
         exit(4)
 
@@ -53,5 +53,5 @@ def main():
     image.close()  
     exit(0)
 
-if __name__ ==  '__main__':
+if __name__ == '__main__':
     main()
