@@ -127,7 +127,7 @@ PS> am_mapimage -i C:\Path\To\Image.png -x1 1 -x2 4 -y1 1 -y2 4
 Feed output to *am_closest* in Powershell
 
 ```Powershell
-PS am_closest @($(am_mapimage -i C:\Path\To\Image.png -x1 1 -x2 4 -y1 1 -y2 4))
+PS> am_closest @($(am_mapimage -i C:\Path\To\Image.png -x1 1 -x2 4 -y1 1 -y2 4))
 Pumpkin Seeds
 Pumpkin Seeds
 Pumpkin Seeds
