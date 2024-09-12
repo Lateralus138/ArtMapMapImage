@@ -11,8 +11,8 @@ if (-Not (Test-Path "$($BUILDDIR)" -PathType Container))
   }
 }
 Set-Location "$($SOURCEDIR)"
-& '.\pyenv_nuitka_setup.ps1' | Exit 254
-& '.\nuitka_compile.ps1' | Exit 253
+& '.\pyenv_nuitka_setup.ps1' || Exit 254
+& '.\nuitka_compile.ps1' || Exit 253
 # MSBuild /p:Configuration=Release /p:Platform=x86
 # if (-Not (Test-Path "$($SOURCEDIR)\Release\am_closest.exe" -PathType Leaf))
 # {
